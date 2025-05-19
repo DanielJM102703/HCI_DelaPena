@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Anda De Boracay Spot</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: #e0f7fa;
+      color: #015f66;
+      line-height: 1.6;
+      overflow-x: hidden;
+      max-width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+    .container {
+      background: #ffffffdd;
+      width: 100%;
+      max-width: 350px;
+      max-height: 600px;
+      overflow-y: auto;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(1, 95, 102, 0.3);
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      position: relative;
+      height: 180px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      overflow: hidden;
+    }
+    header img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      filter: brightness(85%);
+      transition: transform 0.5s ease;
+    }
+    header:hover img {
+      transform: scale(1.05);
+    }
+    header h1 {
+      position: absolute;
+      bottom: 15px;
+      left: 20px;
+      color: #fff;
+      font-size: 1.8em;
+      text-shadow: 2px 2px 6px #004d40;
+      font-weight: 700;
+    }
+    nav {
+      background: #00796b;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 5px;
+      border-radius: 0 0 10px 10px;
+      font-size: 0.9em;
+    }
+    nav a {
+      color: #a7ffeb;
+      text-decoration: none;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    nav a.active, nav a:hover {
+      background: #004d40;
+    }
+    section {
+      padding: 15px 20px;
+      flex-grow: 1;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    section h2 {
+      color: #004d40;
+      border-bottom: 2px solid #004d40cc;
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+    section p {
+      margin-bottom: 12px;
+      font-size: 0.9em;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .feature-item {
+      background-color: #a7ffeb44;
+      padding: 10px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-align: center;
+      font-size: 0.85em;
+      box-shadow: 0 2px 5px #004d40a6;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      margin-top: 10px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+      height: 70px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      box-shadow: 0 3px 7px #004d4099;
+    }
+    .gallery img:hover {
+      transform: scale(1.1);
+      z-index: 10;
+      box-shadow: 0 6px 12px #004d40cc;
+    }
+    .booking-btn {
+      margin-top: 15px;
+      width: 100%;
+      background-color: #004d40;
+      color: #a7ffeb;
+      border: none;
+      padding: 12px;
+      font-size: 1em;
+      font-weight: 700;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.4s ease;
+      box-shadow: 0 5px 12px #004d40cc;
+      user-select: none;
+    }
+    .booking-btn:hover {
+      background-color: #00796b;
+      box-shadow: 0 8px 20px #00796bcc;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.75em;
+      color: #00897b88;
+      padding: 10px 0;
+      border-top: 1px solid #004d4088;
+      user-select: none;
+    }
+    @media (max-width: 600px) {
+      .container {
+        max-width: 98vw;
+        max-height: 98vh;
+        border-radius: 0;
+      }
+      header h1 {
+        font-size: 1.5em;
+        left: 15px;
+        bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="https://th.bing.com/th/id/R.31ff78fd5ea3caced326c9c968e73f2a?rik=0V5wtM3AqoZL9w&riu=http%3a%2f%2fwww.befreetour.com%2fimg%2fproduk%2fbohol-anda-day-tour%2fbohol-anda-day-tour_da8c440cafe0c49c2eaeca5020868d805a617b43.jpg&ehk=13%2f2YbLlb%2b9qZhLZpW3dt4ZibFcgUwiAfmB6PTu7apM%3d&risl=&pid=ImgRaw&r=0" alt="Sunny Shores Beach" />
+      <h1>Anda De Boracay</h1>
+    </header>
+    <nav>
+      <a href="#" class="active" data-section="about">About</a>
+      <a href="#" data-section="highlights">Highlights</a>
+      <a href="#" data-section="gallery">Gallery</a>
+      <a href="#" data-section="visit">Visit</a>
+    </nav>
+    <section id="about" class="active-section">
+      <h2>About Anda De Boracay</h2>
+      <p>Anda De Boracay is a pristine beach destination known for its golden sands, crystal-clear waters, and vibrant marine life. Visitors enjoy a relaxing atmosphere perfect for families, couples, and adventure seekers.</p>
+    </section>
+    <section id="highlights" style="display:none;">
+      <h2>Highlights</h2>
+      <div class="features">
+        <div class="feature-item">White Sandy Beaches</div>
+        <div class="feature-item">Snorkeling & Diving</div>
+        <div class="feature-item">Scenic Sunsets</div>
+        <div class="feature-item">Beachfront Restaurants</div>
+        <div class="feature-item">Boat Tours</div>
+        <div class="feature-item">Tropical Wildlife</div>
+      </div>
+    </section>
+    <section id="gallery" style="display:none;">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="https://i.pinimg.com/originals/e2/b7/4e/e2b74e7921038b65f5fa584e93418a5c.jpg" alt="Beach view 1" />
+        <img src="https://images.pexels.com/photos/533923/pexels-photo-533923.jpeg?auto=compress&cs=tinysrgb&h=70" alt="Beach view 2" />
+        <img src="https://thumbs.dreamstime.com/b/anda-bohol-philippines-aerial-beachfront-church-anda-bohol-philippines-may-aerial-beachfront-church-253806811.jpg" alt="Beach view 3" />
+        <img src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&h=70" alt="Beach view 4" />
+        <img src="https://s-media-cache-ak0.pinimg.com/736x/43/60/ec/4360ec27ca03b310c2273e6e00cafdaa.jpg" alt="Beach view 5" />
+        <img src="https://th.bing.com/th/id/OIP.HnTlIG5HDiW6grxe33_FiQHaFj?rs=1&pid=ImgDetMain" alt="Beach view 6" />
+      </div>
+    </section>
+    <section id="visit" style="display:none;">
+      <h2>Plan Your Visit</h2>
+      <p>Anda De Boracay is open year-round. The best time to visit is between April and October when the weather is warm and sunny.</p>
+      <p>Book your stay at one of our beachfront resorts or enjoy local cuisine at our popular restaurants. We recommend snorkeling tours and boat trips for memorable experiences.</p>
+      <button class="booking-btn" id="bookBtn">Book a Tour</button>
+    </section>
+    <footer>
+      &copy; 2025 Anda De Boracay Tourist Spot
+    </footer>
+  </div>
+  <script>
+    document.querySelectorAll('nav a').forEach((navLink) => {
+      navLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+        this.classList.add('active');
+        let sectionId = this.getAttribute('data-section');
+        document.querySelectorAll('section').forEach(section => section.style.display = 'none');
+        const activeSection = document.getElementById(sectionId);
+        if (activeSection) activeSection.style.display = 'block';
+      });
+    });
+
+    document.getElementById('bookBtn').addEventListener('click', () => {
+      alert('Thank you for your interest! Booking feature coming soon.');
+    });
+  </script>
+</body>
+</html>
